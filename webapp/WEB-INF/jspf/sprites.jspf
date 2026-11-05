@@ -1,0 +1,100 @@
+<%-- Cycle pictures and the banner scene. Drawn as SVG, so no image files are needed. --%>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="wheel">
+      <circle r="33" fill="#ffffff" fill-opacity=".55" stroke="#1d2b32" stroke-width="5"/>
+      <circle r="27" fill="none" stroke="#8fa9b2" stroke-width="1.2"/>
+      <path d="M-27 0H27M0-27V27M-19-19L19 19M-19 19L19-19" fill="none" stroke="#8fa9b2" stroke-width="1"/>
+      <circle r="4" fill="#1d2b32"/>
+    </g>
+    <g id="wheel-fat">
+      <circle r="31" fill="#ffffff" fill-opacity=".55" stroke="#1d2b32" stroke-width="9"/>
+      <circle r="24" fill="none" stroke="#8fa9b2" stroke-width="1.2"/>
+      <path d="M-24 0H24M0-24V24M-17-17L17 17M-17 17L17-17" fill="none" stroke="#8fa9b2" stroke-width="1"/>
+      <circle r="4.5" fill="#1d2b32"/>
+    </g>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f6f8b"/>
+      <stop offset="1" stop-color="#f6c76a"/>
+    </linearGradient>
+  </defs>
+
+  <symbol id="bike-road" viewBox="0 0 240 140">
+    <ellipse cx="120" cy="128" rx="92" ry="5" fill="#14303a" fill-opacity=".12"/>
+    <use href="#wheel" x="58" y="92"/>
+    <use href="#wheel" x="182" y="92"/>
+    <g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--frame,#14303a)">
+      <path d="M58 92L108 94L96 54Z"/>
+      <path d="M96 54L158 56L162 66L108 94"/>
+      <path d="M162 66L182 92"/>
+      <path d="M96 54L93 42"/>
+    </g>
+    <path d="M84 40H105" stroke="#1d2b32" stroke-width="6" stroke-linecap="round"/>
+    <path d="M158 56L161 45H172Q184 45 184 55Q184 64 173 64" fill="none" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="108" cy="94" r="9" fill="none" stroke="#1d2b32" stroke-width="3"/>
+    <path d="M108 94L116 105M112 105H123" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="bike-mountain" viewBox="0 0 240 140">
+    <ellipse cx="120" cy="128" rx="92" ry="5" fill="#14303a" fill-opacity=".12"/>
+    <use href="#wheel-fat" x="58" y="92"/>
+    <use href="#wheel-fat" x="182" y="92"/>
+    <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--frame,#14303a)">
+      <path d="M58 92L108 94L96 54Z"/>
+      <path d="M96 54L158 56L162 66L108 94"/>
+      <path d="M96 54L93 42"/>
+    </g>
+    <path d="M162 66L182 92" fill="none" stroke-width="8" stroke-linecap="round" style="stroke:var(--accent,#f0b429)"/>
+    <path d="M84 40H105" stroke="#1d2b32" stroke-width="6" stroke-linecap="round"/>
+    <path d="M158 56L158 43M147 42H170" fill="none" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="108" cy="94" r="9" fill="none" stroke="#1d2b32" stroke-width="3"/>
+    <path d="M108 94L116 105M112 105H123" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="bike-hybrid" viewBox="0 0 240 140">
+    <ellipse cx="120" cy="128" rx="92" ry="5" fill="#14303a" fill-opacity=".12"/>
+    <use href="#wheel" x="58" y="92"/>
+    <use href="#wheel" x="182" y="92"/>
+    <g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--frame,#14303a)">
+      <path d="M58 92L108 94L96 54Z"/>
+      <path d="M96 54L158 56L162 66L108 94"/>
+      <path d="M162 66L182 92"/>
+      <path d="M96 54L93 42"/>
+    </g>
+    <path d="M84 40H105" stroke="#1d2b32" stroke-width="6" stroke-linecap="round"/>
+    <path d="M158 56L154 38Q156 33 166 34" fill="none" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+    <path d="M168 40H194L189 57H172Z" fill="#ffffff" fill-opacity=".65" stroke-width="2.5" stroke-linejoin="round" style="stroke:var(--accent,#f0b429)"/>
+    <path d="M176 41L177 56M183 41L183 56M190 41L188 56" stroke-width="1.5" style="stroke:var(--accent,#f0b429)"/>
+    <circle cx="108" cy="94" r="9" fill="none" stroke="#1d2b32" stroke-width="3"/>
+    <path d="M108 94L116 105M112 105H123" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="bike-electric" viewBox="0 0 240 140">
+    <ellipse cx="120" cy="128" rx="92" ry="5" fill="#14303a" fill-opacity=".12"/>
+    <use href="#wheel" x="58" y="92"/>
+    <use href="#wheel" x="182" y="92"/>
+    <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--frame,#14303a)">
+      <path d="M58 92L108 94L96 54Z"/>
+      <path d="M96 54L158 56L162 66L108 94"/>
+      <path d="M162 66L182 92"/>
+      <path d="M96 54L93 42"/>
+    </g>
+    <rect x="117" y="75.5" width="36" height="10" rx="3" transform="rotate(-27.4 135 80)" style="fill:var(--accent,#f0b429)"/>
+    <path d="M134 74L130 81H134L132 87L139 79H135L137 74Z" fill="#14303a"/>
+    <circle cx="108" cy="94" r="11" style="fill:var(--accent,#f0b429)"/>
+    <circle cx="108" cy="94" r="4" fill="#14303a"/>
+    <path d="M84 40H105" stroke="#1d2b32" stroke-width="6" stroke-linecap="round"/>
+    <path d="M158 56L160 43Q162 38 172 38" fill="none" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+    <path d="M108 94L116 105M112 105H123" stroke="#1d2b32" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="scene" viewBox="0 0 640 240">
+    <rect width="640" height="240" fill="url(#sky)"/>
+    <circle cx="500" cy="112" r="46" fill="#fff3c4" fill-opacity=".92"/>
+    <path d="M0 168Q90 108 190 158T380 148T640 138V240H0Z" fill="#14303a" fill-opacity=".5"/>
+    <path d="M0 196Q120 150 250 190T500 184T640 174V240H0Z" fill="#14303a" fill-opacity=".8"/>
+    <rect y="206" width="640" height="34" fill="#0d2129"/>
+    <path d="M0 223H640" stroke="#f0b429" stroke-width="3" stroke-dasharray="26 22"/>
+    <use href="#bike-road" x="300" y="78" width="210" height="122" style="--frame:#f0b429"/>
+  </symbol>
+</svg>

@@ -1,0 +1,20 @@
+<%
+    // Never cache protected pages, so the Back button cannot show them again after logout
+    response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+
+    // Only a logged-in user (a session that holds a User) may see these pages
+    HttpSession userSession = request.getSession(false);
+    com.bikerental.model.User user = (userSession == null)
+            ? null : (com.bikerental.model.User) userSession.getAttribute("user");
+    if (user == null) {
+        response.sendRedirect("login.jsp?required=1");
+        return;
+    }
+
+    // The first picture of the page; dashboard.js keeps it up to date after that
+    com.bikerental.service.BookingOperations ops =
+            (com.bikerental.service.BookingOperations) application.getAttribute("bookingOps");
+    String initialState = com.bikerental.util.StateJson.build(ops, user, System.currentTimeMillis());
+%>
